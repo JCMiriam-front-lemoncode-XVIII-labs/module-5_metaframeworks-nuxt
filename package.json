@@ -1,0 +1,32 @@
+{
+  "name": "ruralia-nuxt",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n API,NUXT -c yellow,green \"pnpm dev:api\" \"pnpm dev:nuxt\"",
+    "dev:api": "pnpm --dir mock/master-frontend-metaframeworks-lab/api-server exec tsx src/index.ts",
+    "dev:nuxt": "nuxt dev --port 3000",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "lint": "eslint .",
+    "typecheck": "nuxt typecheck",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@fontsource-variable/manrope": "^5.2.0",
+    "@nuxt/image": "^2.1.0",
+    "nuxt": "^4.0.0",
+    "vue": "^3.5.0",
+    "vue-router": "^5.2.0"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.9.0",
+    "@types/node": "^24.0.0",
+    "concurrently": "^10.0.5",
+    "eslint": "^10.0.0",
+    "typescript": "^5.8.0",
+    "vue-tsc": "^3.0.0"
+  },
+  "packageManager": "pnpm@9.15.9"
+}
