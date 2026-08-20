@@ -1,0 +1,97 @@
+.card {
+  position: sticky;
+  top: 24px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 6%);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading p {
+  margin: 0;
+}
+
+.heading strong {
+  font-size: 1.5rem;
+}
+
+.heading span {
+  font-size: 0.75rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.rating :deep(svg) {
+  color: #e0a221;
+  font-size: 17px;
+}
+
+.dates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 22px 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.dates div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 12px;
+}
+
+.dates div + div {
+  border-left: 1px solid var(--border);
+}
+
+.dates small {
+  font-size: 0.55rem;
+  font-weight: 800;
+}
+
+.dates span {
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.card button {
+  width: 100%;
+  padding: 14px;
+  color: #fff;
+  background: var(--primary);
+  border: 0;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: var(--primary-dark);
+}
+
+.card > small {
+  display: block;
+  margin-top: 12px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .card {
+    position: static;
+    max-width: 480px;
+  }
+}
