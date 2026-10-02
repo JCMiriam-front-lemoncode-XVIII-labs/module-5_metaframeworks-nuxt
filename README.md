@@ -46,6 +46,7 @@ La búsqueda y la solicitud de reserva se hidratan en el navegador porque necesi
 │   └── houses/                    # Búsqueda, tarjetas y reserva
 ├── composables/                   # Acceso tipado al API interno
 ├── layouts/                       # Cabecera y pie compartidos
+├── mock/                          # API y datos locales incluidos
 ├── pages/
 │   ├── houses/[id].vue            # Página de detalle SSR
 │   └── index.vue                  # Listado SSR
@@ -76,22 +77,15 @@ Cada página y componente mantiene sus estilos en un archivo `.css` situado junt
    pnpm install
    ```
 
-2. Clona el repositorio del curso e instala las dependencias del mock:
-
-   ```bash
-   git clone https://github.com/Lemoncode/master-frontend-metaframeworks-lab.git mock/master-frontend-metaframeworks-lab
-   pnpm --dir mock/master-frontend-metaframeworks-lab/api-server install
-   ```
-
-3. Arranca Nuxt y el API simultáneamente:
+2. Arranca Nuxt y el API simultáneamente:
 
    ```bash
    pnpm dev
    ```
 
-4. Abre [http://localhost:3000](http://localhost:3000).
+3. Abre [http://localhost:3000](http://localhost:3000).
 
-La carpeta `mock/` está excluida de Git para evitar anidar el repositorio del curso dentro de esta entrega.
+El mock está incluido en `mock/master-frontend-metaframeworks-lab/api-server` y forma parte del workspace de pnpm, por lo que no requiere ninguna instalación adicional. El propio pnpm ejecuta Nuxt y el API en paralelo, sin necesidad de un gestor de procesos adicional.
 
 ## Configuración del API
 
