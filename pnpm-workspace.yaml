@@ -1,0 +1,3 @@
+packages:
+  - "."
+  - "mock/master-frontend-metaframeworks-lab/api-server"

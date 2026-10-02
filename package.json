@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "concurrently -k -n API,NUXT -c yellow,green \"pnpm dev:api\" \"pnpm dev:nuxt\"",
-    "dev:api": "pnpm --dir mock/master-frontend-metaframeworks-lab/api-server exec tsx src/index.ts",
+    "dev": "pnpm run \"/^dev:(api|nuxt)$/\"",
+    "dev:api": "pnpm --dir mock/master-frontend-metaframeworks-lab/api-server start",
     "dev:nuxt": "nuxt dev --port 3000",
     "build": "nuxt build",
     "preview": "nuxt preview",
@@ -23,7 +23,6 @@
   "devDependencies": {
     "@nuxt/eslint": "^1.9.0",
     "@types/node": "^24.0.0",
-    "concurrently": "^10.0.5",
     "eslint": "^10.0.0",
     "typescript": "^5.8.0",
     "vue-tsc": "^3.0.0"
