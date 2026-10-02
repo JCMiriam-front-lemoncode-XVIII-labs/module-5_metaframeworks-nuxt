@@ -1,0 +1,16 @@
+{
+  "name": "ruralia-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "2.0.5",
+    "hono": "4.12.26"
+  },
+  "devDependencies": {
+    "tsx": "4.22.4"
+  }
+}

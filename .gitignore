@@ -1,5 +1,5 @@
 # dependencies
-/node_modules
+node_modules
 
 # Nuxt
 /.nuxt
@@ -14,5 +14,6 @@
 .DS_Store
 *.log
 
-# auxiliary clone of the course mock API
-/mock/
+# the workspace uses the root pnpm lockfile
+/mock/**/package-lock.json
+/mock/**/pnpm-lock.yaml
